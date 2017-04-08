@@ -1,7 +1,10 @@
 import { combineReducers } from 'redux';
+import { reducer as formReducer } from 'redux-form';
+import PigLatinReducer from './reducer_piglatin';
 
 const rootReducer = combineReducers({
-  state: (state = {}) => state
+  piglatin: PigLatinReducer,
+  form: formReducer
 });
 
 export default rootReducer;
