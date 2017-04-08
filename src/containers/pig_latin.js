@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { reduxForm } from 'redux-form';
 import { pigLatinConvert } from '../actions/index';
-import Converter from '../components/converter';
 
 class PigLatin extends Component {
   render() {
@@ -19,7 +18,6 @@ class PigLatin extends Component {
           </div>
           <button type="submit" className="btn btn-primary">Submit</button>
         </form>
-        <div><Converter data={this.props.output} /></div>
         <label>{this.props.output}</label>
       </div>
     );
