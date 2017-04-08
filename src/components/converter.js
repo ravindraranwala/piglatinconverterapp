@@ -8,7 +8,9 @@ function convertToPigLatin(data){
 }
 
 export default (props) => {
-  // console.log(piglatin.pigatin(props.data));
+  console.log(`${props.data}`);
+  console.log(piglatin('hello there'));  // Works fine
+  console.log(piglatin(`${props.data}`));    // This solved the issue
   return (
     <label>Hello !</label>
   )
