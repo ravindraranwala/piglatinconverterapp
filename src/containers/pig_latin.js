@@ -11,7 +11,7 @@ class PigLatin extends Component {
           <h3>Pig Latin Converter</h3>
           <div className={`form-group ${inputtext.touched && inputtext.invalid ? 'has-danger' : ''}`}>
             <label>Enter a Text</label>
-            <textarea clasName="form-control" {...inputtext} />
+            <textarea className="form-control" {...inputtext} />
             <div className="text-help">
               {inputtext.touched ? inputtext.error : ''}
             </div>
