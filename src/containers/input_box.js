@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { reduxForm } from 'redux-form';
 import { pigLatinConvert } from '../actions/index';
 
-class PigLatin extends Component {
+class InputBox extends Component {
   render() {
     const { fields: { inputtext }, handleSubmit } = this.props;
     return (
@@ -18,7 +18,6 @@ class PigLatin extends Component {
           </div>
           <button type="submit" className="btn btn-primary">Submit</button>
         </form>
-        <label>{this.props.output}</label>
       </div>
     );
   }
@@ -33,12 +32,8 @@ function validate(values) {
   return errors;
 }
 
-function mapStateToProps(state){
-  return { output: state.piglatin.output };
-}
-
 export default reduxForm({
   form: 'PigLatinForm',
   fields: ['inputtext'],
   validate
-}, mapStateToProps, { pigLatinConvert } )(PigLatin);
+}, null, { pigLatinConvert } )(InputBox);
