@@ -3,11 +3,9 @@ const piglatin = (str) => {
     if (!hasAnyLetter(str))
       return str;
 
-    var myArray = str.match(/\S+/g) || [];
+    var words = str.match(/\S+/g) || [];
 
-    var result = myArray.map(function(entry) {
-      return `${translate(entry)}\u0020`;
-    });
+    var result = words.map(word => `${translate(word)}\u0020`);
 
     return capitalizeFirstLetter(result.join(""));
 }
